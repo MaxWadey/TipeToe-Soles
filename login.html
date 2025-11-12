@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TipToe Shoe Sales</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="images/TipToe-Soles_Logo_colour.png" alt="Company Logo"></a>
+    <h1>TipToe Soles</h1>>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="index.html" target="_blank">Home</a></li>
+          <li><a href="about_us.html" target="_blank">About</a></li>
+          <li><a href="contact.html" target="_blank">Contact</a></li>
+          <li><a href="services.html" target="_blank">Services</a></li>
+          <li><a href="login.html" target="_blank">Login</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="login-page">
+      <section class="login-form">
+        <h2>Login to TipToe Soles</h2>
+        <form action="process_login.php" method="POST">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="form-options">
+                <label><input type="checkbox" name="remember">Remember Me</label>
+                <a href="#">Forgot Passowrd?</a>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 TipToe Soles. All rights reserved.</p>
+      <p>Step into comfort and style — your feet deserve the best.</p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a> |
+        <a href="contact.html">Contact Us</a>
+      </p>
+      <p>123 Comfort Lane, Sydney NSW 200</p>
+    </div>
+  </footer>
+</body>
+</html>
