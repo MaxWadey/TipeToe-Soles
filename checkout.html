@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - TipToe Soles</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .checkout-wrapper {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .form-row input {
+      flex: 1;
+    }
+
+    .payment-options {
+      margin-bottom: 30px;
+    }
+
+    .payment-options label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .cta-button {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      background-color: #013c7b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #005fa3;
+    }
+
+    .order-summary {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      width: 300px;
+    }
+
+    .order-summary h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #013c7b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="index.html"><img src="images/TipToe-Soles_Logo_colour.png" alt="Company Logo"></a>
+    <h1>TipToe Soles</h1>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about_us.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Checkout Content -->
+    <main>
+      <div class="checkout-wrapper">
+        <!-- Checkout Form -->
+        <section class="checkout-form">
+          <h2 class="section-title">Checkout</h2>
+          <form action="process_checkout.php" method="POST">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Full Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-row">
+              <input type="text" name="address" placeholder="Address" required>
+              <input type="text" name="city" placeholder="City" required>
+            </div>
+            <div class="form-row">
+              <input type="text" name="zip" placeholder="Postal Code" required>
+            </div>
+
+            <div class="payment-options">
+              <h3>Payment Method</h3>
+              <label><input type="radio" name="payment" value="card" required> Credit/Debit Card</label>
+              <label><input type="radio" name="payment" value="paypal"> PayPal</label>
+              <label><input type="radio" name="payment" value="amex"> Amex</label>
+            </div>
+
+            <button type="submit" class="cta-button">Place Order</button>
+          </form>
+        </section>
+
+        <!-- Order Summary -->
+        <aside class="order-summary">
+          <h3>Order Summary</h3>
+          <p>Gary – $79</p>
+          <p><strong>Total: $79</strong></p>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 TipToe Soles. All rights reserved.</p>
+      <p>Step into comfort and style — your feet deserve the best.</p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a> |
+        <a href="contact.html">Contact Us</a>
+      </p>
+      <p>123 Comfort Lane, Sydney NSW 2000</p>
+    </div>
+  </footer>
+</body>
+</html>
